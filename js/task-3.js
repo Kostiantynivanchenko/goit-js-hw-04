@@ -11,3 +11,10 @@ const profile = {
     return `${this.username} has ${this.playTime} active hours!`;
   },
 };
+console.log(profile.getInfo()); // "Jacob має 300 активних годин!"
+
+profile.changeUsername("Marco");
+console.log(profile.getInfo()); // "Marco має 300 активних годин!"
+
+profile.updatePlayTime(20);
+console.log(profile.getInfo()); // "Marco має 320 активних годин!"

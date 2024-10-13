@@ -1,16 +1,16 @@
-calcAverageCalories(days)
+function calcAverageCalories(days)
 {
     let countAvarage = 0;
-    const values = Object.values(days);
-    for (const value of values) {
-        if (values.length === 0) {
+  const values = Object.values(days);
+  if (values.length === 0) {
             return 0;
         } else {
+            for (const value of values) {
             countAvarage += value.calories;
         }
+  }
+   return countAvarage / values.length;
     }
-    return countAvarage / values.length;
-}
 console.log(
   calcAverageCalories([
     { day: "monday", calories: 3010 },
